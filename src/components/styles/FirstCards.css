@@ -1,0 +1,188 @@
+.cards {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: aqua; */
+    /* background-color: #e9e8e8; */
+    height: 19em;
+    padding: 3em 1em 3em 1em;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 800;
+    font-size: 30px;
+    font-family: "Alliance1", "Alliance1HeaderFallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-feature-settings: unset;
+    box-sizing: border-box;
+    /* position: relative; */
+
+    margin-bottom: 5em;
+}
+
+/* IMI BAG PULA IN ELE
+VAZI CUM FACI RESIZE ON HOVER FARA SA FUTI TOT */
+
+.cards .card {
+    height: 13em;
+    width: 18em;
+    /* background-color: blueviolet; */
+    /* background-color: #24292f; */
+    /* padding: 18px; */
+    border-radius: 8px;
+    position: relative;
+    cursor: default;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+    animation: slide-out-card;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    overflow: hidden;
+    
+}
+
+@keyframes slide-card{
+    to{
+        height: 15em;
+    }
+}
+
+@keyframes slide-out-card{
+    from{
+        height: 15em;
+    }
+    to{
+        height: 13em;
+    }
+}
+
+@keyframes slide-detail{
+    from{
+        color: #24292f06;
+        left: 0%;
+        transform: translateY( 4em);
+    } to{
+        left: 0%;
+        visibility: visible;
+        color: #24292f;
+    }
+}
+
+@keyframes slide-out-detail{
+    from{
+        left: 0%;
+        visibility: visible;
+    } to {
+        left: 0%;
+        transform: translateY( 2em);
+        color: #24292f06;
+        visibility: hidden;
+    }
+}
+
+.cards .card:hover {
+    /* height: 15em; */
+    /* FA AMINAMITE */
+    animation: slide-card;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.cards .card:hover .detail{
+    animation: slide-detail;
+    animation-duration: 0.85s;
+    animation-fill-mode: both;
+}
+
+
+.cards .card .first,
+.cards .card .second {
+    /* margin: 18px; */
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2.5px);
+}
+
+.cards .card .first {
+    background: rgb(197, 206, 217);
+    background: linear-gradient(309deg, rgba(197, 206, 217, 1) 25%, rgba(88, 140, 224, 1) 79%);
+}
+
+.cards .card .second {
+    background: rgb(36, 41, 47);
+    background: linear-gradient(309deg, rgba(36, 41, 47, 1) 25%, rgba(17, 76, 170, 1) 79%);
+}
+
+.cards .card .tit-sub {
+    display: flex;
+    flex-direction: column;
+    height: 88%;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.cards .card .title {
+    text-align: left;
+    bottom: 0%;
+    left: 0%;
+}
+
+.cards .card .subtitle {
+    text-align: left;
+    font-size: 26px;
+}
+
+.cards .card .detail{
+    font-size: 20px;
+    max-width: 65%;
+    text-align: left;
+    position: absolute;
+    top: 60%;
+    margin-left: 1.2em;
+    visibility: hidden;
+    animation: slide-out-detail;
+    animation-duration: .2s;
+    animation-fill-mode: both;
+}
+
+.cards .hover-me{
+    position: absolute;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 1em;
+    color: #56728f;
+    right: 0%;
+}
+
+@keyframes img-focus{
+    to{
+        opacity: 30%;
+        top: 25%;
+        left: 25%;
+    }
+}
+
+@keyframes img-unfocus{
+    from{
+        opacity: 30%;
+        top: 25%;
+        left: 25%;
+    }
+}
+
+.cards img{
+    position:absolute;
+    height:100%;
+    opacity: 70%; /* MOVE to 30 in ANIMATION*/
+    top: 30%;
+    left: 30%;
+    border-radius: 5px;
+    animation: img-unfocus;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+}
+
+.cards .card:hover img{
+    animation: img-focus;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}

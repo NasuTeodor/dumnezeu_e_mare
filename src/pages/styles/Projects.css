@@ -1,0 +1,381 @@
+.projects {
+    margin-bottom: 4em;
+    width: 100%;
+    height: 100%;
+    /* background-color: #00000072; */
+
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: -0.03em !important;
+    color: #24292f;
+    font-family: "Alliance1", "Alliance1HeaderFallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 800;
+    font-feature-settings: unset;
+
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.projects .card {
+    height: 32em;
+    width: 30em;
+    border-radius: 8px;
+    position: relative;
+    cursor: default;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+    animation: slide-out-card-project;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    overflow: hidden;
+
+}
+
+@keyframes slide-card-project {
+    to {
+        height: 37em;
+        width: 35em;
+    }
+}
+
+@keyframes slide-out-card-project {
+    from {
+        height: 37em;
+        width: 35em;
+    }
+
+    to {}
+}
+
+.projects .card:hover {
+    /* height: 15em; */
+    /* FA AMINAMITE */
+    animation: slide-card-project;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.projects .card .first,
+.projects .card .second,
+.projects .card .third {
+    /* margin: 18px; */
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2.5px);
+    position: absolute;
+}
+
+.projects .card .first {
+    background: rgb(197, 206, 217);
+    background: linear-gradient(309deg, rgba(197, 206, 217, 1) 25%, rgba(88, 140, 224, 1) 79%);
+}
+
+.projects .card .second {
+    background: rgb(36, 41, 47);
+    background: linear-gradient(309deg, rgb(68, 73, 79) 25%, rgba(17, 76, 170, 1) 79%);
+}
+
+/* ADAUGA GRADIENT BACKGROUND LA THIRD */
+
+.projects .card .title {
+    position: relative;
+    /* text-align: center; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -50%);
+    font-size: 38px;
+    animation: title-back;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+}
+
+@keyframes title-slide {
+    to {
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, 0%);
+        font-size: 34px;
+        padding: 1em;
+    }
+}
+
+@keyframes title-back {
+    from {
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, 0%);
+        font-size: 34px;
+        padding-left: 1em;
+        padding-top: 2em;
+    }
+}
+
+.projects .card:hover .title {
+    animation: title-slide;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+}
+
+.projects .card .subtitle {
+    visibility: hidden;
+    position: relative;
+    left: -40%;
+    top: 15%;
+    font-size: 18px;
+    padding-left: 2em;
+    animation: subtitle-back;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+}
+
+.projects .card:hover .subtitle {
+    animation: subtitle-slide;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+}
+
+@keyframes subtitle-slide {
+    from {
+        color: #24292f20;
+    }
+
+    to {
+        color: #24292f;
+        visibility: visible;
+        left: 0%;
+        top: 0%;
+    }
+}
+
+@keyframes subtitle-back {
+    from {
+        color: #24292f;
+        visibility: visible;
+        top: 0%;
+        left: 0%;
+    }
+
+    to {
+        color: #24292f20;
+        visibility: hidden;
+        left: -40%;
+        top: 15%;
+    }
+}
+
+.projects .card .detail{
+    position: absolute;
+    top: 45%;
+    left: -30%;
+    padding: 2em;
+    max-width: 410px;
+    visibility: hidden;
+    animation: detail-back;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+}
+
+.projects .card:hover .detail{
+    animation: detail-slide;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+}
+
+@keyframes detail-slide{
+    from{
+        color: #24292f20;
+    }
+    to{
+        left: 0%;
+        visibility: visible;
+        color: #24292f;
+    }
+}
+
+@keyframes detail-back {
+    from{
+        left: 0%;
+        visibility: visible;
+        color: #24292f;
+    } to {
+        color: #24292f20;
+    }
+}
+
+
+
+.projects .card .final{
+    position: absolute;
+    bottom: 0%;
+    padding: 2em;
+    left: -60%;
+    visibility: hidden;
+}
+
+.projects .card:hover .final{
+    animation: final-slide;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+}
+
+@keyframes final-slide{
+    from{
+        color: #24292f20;
+    } to {
+        left: 0%;
+        visibility: visible;
+        color: #24292f;
+    }
+}
+
+
+.projects .hover-me {
+    position: absolute;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 1em;
+    color: #56728f;
+    right: 0%;
+}
+
+@keyframes img-focus {
+    to {
+        opacity: 30%;
+        top: 25%;
+        left: 25%;
+    }
+}
+
+@keyframes img-unfocus {
+    from {
+        opacity: 30%;
+        top: 25%;
+        left: 25%;
+    }
+}
+
+.projects img {
+    position: absolute;
+    height: 100%;
+    opacity: 70%;
+    /* MOVE to 30 in ANIMATION*/
+    top: 30%;
+    left: 30%;
+    border-radius: 5px;
+    animation: img-unfocus;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+}
+
+.projects .card:hover img {
+    animation: img-focus;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* VERSIUNE VECHE */
+
+/* .projects .first,
+.projects .second,
+.projects .third {
+    height: 70%;
+    top: 15%;
+    position: absolute;
+    margin-bottom: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.projects .first{
+    left: 0%;
+    width: 35%;
+    z-index: 0;
+
+    background-color: blue;
+}
+
+.projects .top-f{
+    margin: 2em;
+    background-color: #24292f48;
+    width: 80%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.projects .bottom-f{
+    background-color: #24292f48;
+    max-width: 90%;
+    margin: 2em;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.projects .second{
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 38%;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+    z-index: 1;
+
+    background-color: aquamarine;
+}
+
+.projects .top-s{
+    margin: 2em;
+    background-color: #24292f48;
+    width: 80%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.projects .bottom-s{
+    background-color: #24292f48;
+    max-width: 80%;
+    margin-left: 4em;
+    margin-bottom: 2em;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+.projects .third{
+    right: 0%;
+    width: 35%;
+    background-color: blue;
+    z-index: 0;
+}
+
+.projects .title{
+    font-size: 42px;
+    padding: .5em;
+}
+
+.projects .subtitle{
+    font-size: 22px;
+    padding: 1em;
+    
+}
+
+.projects .detail{
+    font-size: 18px;
+    letter-spacing: -0.06em;
+    text-align: justify;
+}
+
+.projects .final{
+    text-align: justify;
+    font-size: 16px;
+} */

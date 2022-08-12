@@ -1,0 +1,56 @@
+.login{
+    /* ba nu vreau sa o fac flex te rog nu ai mila */
+    float: right;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+}
+
+.login .loginBtn{
+    /* border: black; */
+    background-color: #24292f;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 6px 12px 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.navbar .loginForm{
+    transform: translate(-135px, 85px);
+    position: absolute;
+    /* background-color: aqua; */
+    padding: 1em 0.1em 1em 1em;
+    border-color: #24292f;
+    /* background-color: rgba(0, 0, 0, .2); */
+    /* background-color: whitesmoke; */
+    border: 5px;
+    border-radius: 12px;
+}
+
+.navbar .loginForm input{
+    /* border-color: black; */
+    border-radius: 5px;
+    line-height: 1.8;
+    /* background: rgba(0, 0, 0, .2); */
+    background-color: whitesmoke;
+    box-shadow: none;
+    font-style: italic;
+    font-weight: bold;
+    box-sizing: border-box;
+    /* margin: 1em 1em; */
+    padding: 0.1em 1em 0.1em 1em;
+    width: 90%;
+    /* height: 2em; */
+}
+
+.navbar .logname{
+    margin-bottom: 1em;
+}
+
+.navbar .logsub{
+    visibility: hidden;
+}
