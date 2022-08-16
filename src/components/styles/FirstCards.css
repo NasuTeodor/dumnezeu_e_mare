@@ -18,6 +18,23 @@
     margin-bottom: 5em;
 }
 
+@media only screen and (max-width: 1280px){
+    .cards{
+        padding: 0em 1em 3em 1em;
+        max-width: none;
+        width: 100%;
+        flex-direction: column;
+        height: 42em;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-30%);
+    }
+
+    .cards .card{
+        transform: scale(110%);
+    }
+}
+
 /* IMI BAG PULA IN ELE
 VAZI CUM FACI RESIZE ON HOVER FARA SA FUTI TOT */
 

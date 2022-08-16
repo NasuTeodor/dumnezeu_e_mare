@@ -84,3 +84,9 @@
 .contact:focus-visible {
   box-shadow: none;
 }
+
+@media only screen and (max-width: 1280px){
+    .footer{
+      width: 92%;
+    }
+}
