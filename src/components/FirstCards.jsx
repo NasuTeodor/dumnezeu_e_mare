@@ -22,7 +22,7 @@ function FirstCards() {
                     </div>
                 </div>
             </div>
-            <div className='card'>
+            {/* <div className='card'>
                 <div className='second'>
                     <img src={require('./media/cards.png')} alt='' />
                     <div className='hover-me'>HOVER ME</div>
@@ -38,7 +38,7 @@ function FirstCards() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 

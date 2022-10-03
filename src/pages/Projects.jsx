@@ -45,7 +45,6 @@ function Projects() {
         //         Covid Reporting
         //     </div>
         // </div>
-
         <div className="projects">
             <div className="card">
                 <div className="first">
@@ -84,13 +83,17 @@ function Projects() {
             <div className="card">
                 <div className="third">
                     <div className="title">
-                        Covid Reporting
+                        Covid Reporting<br />
+                        TREBUIE POZE DE FUNDAL
                     </div>
                     <div className="subtitle">
                         Made with Python.
                     </div>
                     <div className="detail">
-                        
+                        ce faci bine tu nu ok da 
+                    </div>
+                    <div className="final">
+                        Va rog opriti viata vreau sa cobor
                     </div>
                 </div>
             </div>
